@@ -12,7 +12,7 @@ interface FileUploadProps {
 const FileUpload = ({ onChange, endpoint }: FileUploadProps) => {
   return (
     <UploadDropzone
-      endpoint='courseImage'
+      endpoint={endpoint}
       onClientUploadComplete={(res) => {
         onChange(res?.[0].url);
       }}
